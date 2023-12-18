@@ -1,29 +1,32 @@
 module.exports = {
     app: {
+        token: 'MTE4NjM3MTMzOTU2MTQ3MjA2MA.GcpTEa.N-nn4oeU9ldPwBdMnCYzYVI6fyEjki0me5IYTg',
         playing: 'Discord',
+        global: true,
+        guild: '',
+        ExtraMessages: false,
+        loopMessage: false,
+
     },
+
     opt: {
+        DJ: {
+            enabled: false,
+            roleName: '',
+            commands: []
+        },
         maxVol: 100,
-        defaultvolume: 80,
-        minVol: 0,
-        leaveOnEnd: true,
-        leaveOnEndCooldown: 300000, // 5 minutes
-        leaveOnStop: true,
+        spotifyBridge: true,
+        volume: 75,
         leaveOnEmpty: true,
-        leaveOnEmptyCooldown: 30000, // 30 seconds
+        leaveOnEmptyCooldown: 30000,
+        leaveOnEnd: true,
+        leaveOnEndCooldown: 30000,
         discordPlayer: {
             ytdlOptions: {
                 quality: 'highestaudio',
                 highWaterMark: 1 << 25
             }
-        },
-        maxNumberOfChoices: 10, // Maximum autocomplete choices, shouldn't be more than 25
-    },
-    paginate: {
-        fastSkip: true, // creates two additional button, one for skip to end, one for skip to first
-        pageTravel: true, // travel between pages by sending page numbers
-        disableButtons: true, // remove buttons after timeout
-        time: 60000, // 60 seconds
-        itemsPerPage: 8,
+        }
     }
 };
